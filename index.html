@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpecsAtHome Eyewear Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+
+    <!-- Header -->
+      <header>
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="/assets/logo.png" alt="logo">
+      </a>
+
+      <!-- Hamburger button (only on mobile) -->
+      <button class="hamburger" id="hamburger">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#">GLASSES</a>
+        <a href="#">SUNGLASSES</a>
+        <a href="#">BRANDS</a>
+        <a href="#" class="nav-dropdown">
+          ABOUT US 
+          <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-container">
+          <input type="text" placeholder="Search for Specs" class="search-input" />
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#94A3B8">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+        <a href="#" class="icon-link">
+          <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 016.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+          </svg>
+        </a>
+        <a href="#" class="icon-link">
+          <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero-section">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1574258481428-db0819911e38?q=80&w=2070&auto=format&fit=crop');">
+                <div class="hero-gradient" style="background-image: linear-gradient(to right, rgba(207, 250, 254, 0.7), rgba(224, 231, 255, 0.7));"></div>
+                <div class="container hero-content-container">
+                    <div class="hero-content">
+                        
+                        <div>
+                            <h1>Premium eyewear <br/> delivered to your door- <br/> <span class="highlight">Same day</span> Glasses</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum <br> dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        </div>
+
+                        <div class="hero-part">
+                        <img src="/assets/image3.png" alt="">
+                        </div>
+                        <a href="#" class="btn btn-primary">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1780&auto=format&fit=crop');">
+                <div class="hero-gradient" style="background-image: linear-gradient(to right, rgba(254, 226, 226, 0.7), rgba(233, 213, 255, 0.7));"></div>
+                 <div class="container hero-content-container">
+                    <div class="hero-content">
+                        <h1>Find Your Perfect <br/> Style & Vision- <br/> <span class="highlight">Latest</span> Trends</h1>
+                        <p>Discover our latest collection of designer frames and sunglasses. Unbeatable quality and style delivered right to you.</p>
+                        <a href="#" class="btn btn-primary">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <button class="hero-prev hero-nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button class="hero-next hero-nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <img src="assets/bgimage.png" alt="" class="bg-image" style="position: absolute; top: 730px;">
+            <div class="features-background">
+              <div class="container features-container">
+                <div class="feature-item">
+                    <img src="/assets/truck-fast.png" alt="Speedy Delivery"/>
+                    <div><h3>Speedy Delivery</h3><p>Orders from all item</p></div>
+                </div>
+                 <div class="feature-item">
+                    <img src="/assets/WalletMoney (4).png" alt="Easy Returns"/>
+                    <div><h3>Easy Returns</h3><p>On all unused items</p></div>
+                </div>
+                <!-- todo image correction -->
+                 <div class="feature-item"> 
+                    <img src="/assets/Headphones.png" alt="Online Support"/>
+                    <div><h3>Online Support</h3><p>Always online 24/7</p></div>
+                </div>
+                <div class="feature-item">
+                     <img src="/assets/WalletMoney (1).png" alt="Online Support"/>
+                    <div><h3>Secure Payment</h3><p>100% secure payment</p></div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!-- Promotional Banners -->
+        <section class="promo-banners-section">
+            <div class="container promo-banners-grid">
+                <div class="promo-card-large" style="background-image: url('/assets/Rectangle8.png')">
+                    <div class="promo-overlay"></div>
+                    <div class="promo-content" id="promo1">
+                        
+                        <h2>REGLAZE YOUR FRAME</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet.</p>
+                        <a href="#" class="btn btn-primary">SHOP NOW</a>
+                    </div>
+                </div>
+                <div class="promo-small-group">
+                    <div class="promo-card-small" style="background-image: url('/assets/Rectangle10.png')">
+                        <div class="promo-overlay"></div>
+                        <div class="promo-content">
+                            <h2>GET REPAIR YOUR <br/> GLASSES ON THE SPOT</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet.</p>
+                            <a href="#" class="btn btn-primary btn-sm">SHOP NOW</a>
+                        </div>
+                    </div>
+                    <div class="promo-card-small" style="background-image: url('/assets/image6.png')">
+                        <div class="promo-overlay"></div>
+                        <div class="promo-content">
+                            <h2>GREAT FRAMES NO <br/> EXTRA COST!</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet.</p>
+                            <a href="#" class="btn btn-primary btn-sm">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <img src="/assets/bgimage.png" class="bg-image" style="position:absolute ; margin-left: 27.5rem; margin-top: 44rem; z-index: -1; " alt="">
+            </div>
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <!-- Product Carousel Section -->
+        <section id="most-popular" class="product-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>MOST POPULAR</h2>
+                    <p>Quality, reasonable price are the strengths of our products.</p>
+                </div>
+                <div class="tabs">
+                    <button class="tab-btn active">GLASSES</button>
+                    <button class="tab-btn">SUNGLASSES</button>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="scroll-container">
+                        <!-- Product Cards will be injected here by script.js -->
+                    </div>
+                    <button class="scroll-prev scroll-btn hero-nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button class="scroll-next scroll-btn hero-nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop By Category -->
+        <section class="category-section">
+          <div class="container">
+            <div class="section-header">
+              <h2>SHOP BY CATEGORIES</h2>
+              <p>Discover frames by category to match your vision and style</p>
+            </div>
+            <div class="category-flex">
+              <a href="#" class="category-card group">
+                  <div class="category-card-bg" style="background-image: url('/assets/glasses.jpg')"></div>
+                  <div class="promo-overlay"></div>
+                  <div class="category-card-content">
+                      <h3>GLASSES</h3><p>50+</p>
+                  </div>
+              </a>
+              <a href="#" class="category-card group">
+                  <div class="category-card-bg" style="background-image: url('assets/sunglasses.jpg')"></div>
+                  <div class="promo-overlay"></div>
+                  <div class="category-card-content">
+                      <h3>SUNGLASSES</h3><p>50+</p>
+                  </div>
+              </a>
+              <a href="#" class="category-card group">
+                  <div class="category-card-bg" style="background-image: url('/assets/premium.jpg')"></div>
+                  <div class="promo-overlay"></div>
+                  <div class="category-card-content">
+                      <h3>PREMIUM GLASSES</h3><p>50+</p>
+                  </div>
+              </a>
+              <a href="#" class="category-card group">
+                  <div class="category-card-bg" style="background-image: url('/assets/unisex.png')"></div>
+                  <div class="promo-overlay"></div>
+                  <div class="category-card-content">
+                      <h3>UNISEX GLASSES</h3><p>50+</p>
+                  </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Meet Consultant -->
+        <section class="consultant-section">
+            <br>
+            <br>
+            <div class="container consultant-grid">
+              <img src="assets/bgimage.png" alt="" class="bg-image" style="position: absolute; margin-left: 530px; margin-bottom: 350px;">
+            <div class="consultant-text">
+              <h2>MEET MR.KASHAN</h2>
+              <p>Hi, I'm Kashan, a Style & Vision Consultant and founder of Specs at Home. My mission is simple: to make buying glasses easier, more affordable, and tailored to your lifestyle. I realised that the traditional eyewear industry hasn't changed for years - customers still face high prices, long waiting times, and the inconvenience of multiple visits to an optician. That's why I created Specs at Home, a mobile optical dispensing service that brings premium-quality eyewear straight to your door.</p>
+              <p>Ready to find your perfect pair of glasses? Click below to schedule your appointment with our mobile eyewear specialist.</p>
+              <a href="#" class="btn btn-primary">BOOK AN APPOINTMENT</a>
+            </div>
+            <div class="consultant-image">
+              <img src="/assets/kashan.png" alt="Mr. Kashan"/>
+            </div>
+          </div>
+        </section>
+
+        <!-- Product Carousel Section -->
+        <section id="new-arrivals" class="product-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>NEW ARRIVALS</h2>
+                    <p>Quality, reasonable price are the strengths of our products.</p>
+                </div>
+                <div class="tabs">
+                    <button class="tab-btn active">GLASSES</button>
+                    <button class="tab-btn">SUNGLASSES</button>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="scroll-container">
+                        <!-- Product Cards will be injected here by script.js -->
+                    </div>
+                    <button class="scroll-prev scroll-btn hero-nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button class="scroll-next scroll-btn hero-nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands -->
+        <section class="brands-section">
+          <div class="container brands-container">
+              <img src="/assets/brand1.png" alt="Ray-Ban" />
+              <img src="/assets/brand2.png" alt="Walter & Herbert" />
+              <img src="/assets/brand3.png" alt="Carducci" />
+              <img src="/assets/brand4.png" alt="Vogue" />
+              <img src="/assets/brand3.png" alt="Ray-Ban" />
+              <img src="/assets/brand2.png" alt="Walter & Herbert" />
+          </div>
+        </section>
+
+        <!-- Vision Banners -->
+        <section class="vision-banners-section">
+          <div class="container vision-banners-grid">
+            <div class="vision-card" style="background-image: url('/assets/cycle.png')">
+              <div class="promo-overlay"></div>
+              <div class="vision-content">
+                <h2>Vision That Moves With You.</h2>
+                <a href="#" class="btn btn-primary">SHOP NOW</a>
+              </div>
+            </div>
+            <div class="vision-card" style="background-image: url('/assets/cycle2.png')">
+              <div class="promo-overlay"></div>
+              <div class="vision-content">
+                <h2>Timeless Style, Effortless Vision.</h2>
+                <a href="#" class="btn btn-primary">SHOP NOW</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>OUR CUSTOMER EXPERIENCE</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <div class="rating-summary">
+                        <span class="rating-score">5.0</span>
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 14.25l-4.243 2.23.81-4.724L3.43 8.25l4.743-.69L10 3l2.827 4.56L17.57 8.25l-3.136 3.506.81 4.724L10 14.25z" clip-rule="evenodd" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 14.25l-4.243 2.23.81-4.724L3.43 8.25l4.743-.69L10 3l2.827 4.56L17.57 8.25l-3.136 3.506.81 4.724L10 14.25z" clip-rule="evenodd" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 14.25l-4.243 2.23.81-4.724L3.43 8.25l4.743-.69L10 3l2.827 4.56L17.57 8.25l-3.136 3.506.81 4.724L10 14.25z" clip-rule="evenodd" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 14.25l-4.243 2.23.81-4.724L3.43 8.25l4.743-.69L10 3l2.827 4.56L17.57 8.25l-3.136 3.506.81 4.724L10 14.25z" clip-rule="evenodd" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 14.25l-4.243 2.23.81-4.724L3.43 8.25l4.743-.69L10 3l2.827 4.56L17.57 8.25l-3.136 3.506.81 4.724L10 14.25z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <span>Google Reviews (256)</span>
+                    </div>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="scroll-container">
+                        <!-- Testimonial Cards will be injected here -->
+                    </div>
+                    <button class="scroll-prev scroll-btn hero-nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button class="scroll-next scroll-btn hero-nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="section-footer">
+                    <a href="#" class="btn btn-primary">REVIEW US ON GOOGLE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog-section" class="blog-section">
+            <div class="container">
+                 <div class="section-header">
+                    <h2>LATEST BLOG</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="scroll-container">
+                        <!-- Blog Cards will be injected here -->
+                    </div>
+                    <button class="scroll-prev scroll-btn hero-nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button class="scroll-next scroll-btn hero-nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call To Action -->
+        <section class="cta-section">
+          <div class="container cta-container">
+            <h2>Let's connect &mdash; we're just a message away.</h2>
+            <a href="#" class="btn btn-primary">CONTACT US</a>
+          </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-container-main">
+        <div class="footer-grid">
+          <div class="footer-col-subscribe">
+            <div class="logo">
+                <img src="/assets/logo.png" alt="">
+            </div>
+            <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+            <p>Get the latest updates on new products and upcoming sales</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address"/>
+              <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+              </button>
+            </form>
+          </div>
+          <div class="footer-col-links">
+            <h4>ABOUT US</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col-links">
+            <h4>MORE INFO</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Return & refund Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col-links">
+            <h4>CONTACT US</h4>
+            <address>
+                <p>2 Mapleleafe Gardens, Barkingside, London, IG6 1LG</p>
+                <p>Call : <a href="tel:02038862278">020 3886 2278</a></p>
+                <p>WhatsApp : <a href="tel:+447475293322">+44 7475 293322</a></p>
+                <p>Mail : <a href="mailto:info@specsathome.london">info@specsathome.london</a></p>
+            </address>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-container">
+           <p>Copyright 2025, SpecsatHome - Developed by 9WEB</p>
+           <div class="socials">
+              <span>FOLLOW US :</span>
+              <a href="#"><img src="assets/Instagram.png" alt="instagram" /></a>
+              <a href="#"><img src="assets/Youtube.png" alt="youtube" style="width: 32px; height: 24px;"/></a>
+              <a href="#"><img src="assets/Facebook.png" alt="facebook" style="width: 12px; height: 24px;"/></a>
+              <a href="#"><img src="assets/Twitter.png" alt="twitter" style="width: 30px; height: 24px;"/></a>
+           </div>
+        </div>
+      </div>
+    </footer>
+
+      <script src="./script.js"></script>
+  </body>
+</html>
