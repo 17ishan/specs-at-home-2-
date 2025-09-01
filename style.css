@@ -1515,16 +1515,11 @@ footer {
     border: 1px solid black;
   } */
   
-  .promo-banners-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 0;
-    padding: 0 1rem;
-  }
+
   
   .promo-card-large,
   .promo-card-small {
-    width: 100%;
+    width: 40%;
     height: 300px;
     margin: 0 auto;
   }
@@ -1606,6 +1601,7 @@ footer {
   /* Brands Section - Mobile */
   .brands-section {
     padding: 2rem 0;
+    display:  none;
   }
   
   .brands-container {
@@ -1733,6 +1729,328 @@ footer {
 
   
 }
+
+
+
+
+
+
+
+/* =======================
+   Extra Mobile Responsive Fixes
+   ======================= */
+@media (max-width: 768px) {
+
+  /* --- Hero Banner --- */
+  #hero-section {
+    height: 200px;
+    width: 100%;
+  }
+  .hero-content {
+    text-align: center;
+    padding: 1rem;
+    align-items: center;
+  }
+  .hero-content h1 {
+    font-size: 1.25rem;
+  }
+  .hero-content p {
+    font-size: 0.75rem;
+  }
+
+  /* --- Features Section (hide on mobile) --- */
+  .features-container {
+    display: none;
+  }
+
+  /* --- Promo banners → horizontal scroll --- */
+  .promo-banners-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 0 1rem;
+    scroll-snap-type: x mandatory;
+  }
+  .promo-card-large,
+  .promo-card-small {
+    min-width: 132px;
+    height: 160px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    padding: 1rem;
+  }
+  .promo-content h2 {
+    font-size: 14px;
+  }
+  .promo-content p {
+    display: none;
+  }
+  .btn {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  /* --- Categories carousel --- */
+  .category-flex {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 0 1rem;
+    scroll-snap-type: x mandatory;
+  }
+  .category-card {
+    min-width: 132px;
+    height: 160px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+
+  /* --- Consultant --- */
+  .consultant-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .consultant-image {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  /* --- Brands scroll --- */
+  .brands-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 0 1rem;
+  }
+  .brands-container img {
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  /* --- Vision banners stacked --- */
+  .vision-banners-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .vision-card {
+    height: 160px;
+    border-radius: 12px;
+  }
+
+  /* --- Testimonials + Blogs → carousel --- */
+  .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 0 1rem;
+    scroll-snap-type: x mandatory;
+  }
+  .scroll-container > * {
+    min-width: 240px;
+    scroll-snap-align: start;
+  }
+
+  
+  
+}
+
+/* ========== Footer Responsive for Mobile ========== */
+/* Mobile-only footer (does NOT change desktop) */
+@media (max-width: 768px) {
+  /* container spacing */
+  .footer-container-main {
+    padding: 20px 16px;
+  }
+
+  /* make footer into a simple 2-column grid on mobile */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  /* Subscribe block spans full width on top */
+  .footer-col-subscribe {
+    grid-column: 1 / -1;
+    padding: 0;
+  }
+
+  /* Logo left aligned like the screenshot */
+  .footer-col-subscribe .footer-logo img,
+  .footer-col-subscribe .logo img {
+    display: block;
+    margin: 0 0 12px 0; /* left aligned, small gap under */
+    max-width: 160px;
+    height: auto;
+  }
+
+  /* Headings/text left aligned */
+  .footer-col-subscribe h4,
+  .footer-col-subscribe p {
+    text-align: left;
+  }
+
+  .footer-col-subscribe h4 {
+    margin: 6px 0 8px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .footer-col-subscribe p {
+    margin: 0 0 12px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* newsletter: full width input + blue square button on right */
+  .newsletter-form {
+    display: flex;
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 46px;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    border: none;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .newsletter-form button {
+    width: 46px;
+    min-width: 46px;
+    background: var(--brand-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+  }
+
+  .newsletter-form button svg {
+    width: 18px;
+    height: 18px;
+    stroke: #fff;
+  }
+
+  /* Link columns: ABOUT US and MORE INFO should sit side-by-side */
+  .footer-col-links {
+    padding: 0;
+  }
+
+  .footer-col-links h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: none;
+  }
+
+  .footer-col-links ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-col-links ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-col-links ul li a {
+    color: #111827;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  /* Contact block should be full width under the two link columns */
+  .footer-grid > .footer-col-links:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+
+  .footer-col-links address {
+    font-style: normal;
+    color: #111827;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer-col-links address a {
+    color: #0b2e4a;
+    text-decoration: underline;
+  }
+
+  /* Footer bottom (copyright + socials) centered, stacked */
+  .footer-bottom {
+    margin-top: 18px;
+    border-top: 1px solid #e5e7eb;
+    padding: 14px 0 8px;
+  }
+
+  .footer-bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* align left like screenshot */
+    gap: 12px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Copyright text left aligned and small */
+  .footer-bottom-container p {
+    margin: 0;
+    font-size: 13px;
+    color: #111827;
+  }
+
+  /* Socials row: FOLLOW US : then icons */
+  .footer-bottom .socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .footer-bottom .socials span {
+    font-weight: 700;
+    font-size: 13px;
+    margin-right: 6px;
+  }
+
+  .footer-bottom .socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-bottom .socials img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+
+  /* ensure everything left aligned like the screenshot */
+  .footer-container-main,
+  .footer-grid > * {
+    text-align: left;
+  }
+
+  /* small tweaks for spacing on very small screens */
+  @media (max-width: 360px) {
+    .footer-container-main { padding-left: 12px; padding-right: 12px; }
+    .footer-col-subscribe .footer-logo img { max-width: 140px; }
+    .newsletter-form { height: 44px; }
+  }
+}
+
 
 
 
