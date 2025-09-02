@@ -87,7 +87,7 @@ button {
 
 .btn-primary {
   background-color: var(--brand-blue);
-  color: #fff;
+  color: #ffffff;
   padding: 0.75rem 2rem;
 }
 
@@ -587,6 +587,11 @@ header .container {
     .features-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .features-section{
+      display: none;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -780,6 +785,7 @@ header .container {
 .blog-card-wrapper {
   scroll-snap-align: center;
   flex-shrink: 0;
+  /* border: 2px solid black; */
 }
 .product-card-wrapper {
   width: 280px;
@@ -874,6 +880,7 @@ header .container {
   justify-content: center;
   align-items: baseline;
   gap: 0.5rem;
+
 }
 .product-card .original-price {
   color: var(--text-light);
@@ -883,6 +890,7 @@ header .container {
   color: var(--brand-blue);
   font-weight: 700;
   font-size: 1.25rem;
+  /* text-align: center; */
 }
 
 /* --- Shop By Category --- */
@@ -912,13 +920,14 @@ header .container {
   width: 18rem;      
   border-radius: 0.5rem;
   overflow: hidden;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
 }
 
 @media (max-width: 768px) {
   .category-card {
+    display: flex;
     width: 100%;
     height: 15rem;
   }
@@ -998,6 +1007,11 @@ header .container {
 .consultant-image {
   display: flex;
   justify-content: center;
+  /* border: 1px solid black; */
+  position: absolute;
+  /* justify-content: right; */
+  margin-left: 45rem;
+  margin-top: 5px;
 }
 
 @media (max-width: 768px) {
@@ -1010,10 +1024,12 @@ header .container {
 
 .consultant-image img {
   border-radius: 0.5rem;
-  width: 502px;
+  width: 500px;
   height: 519px;
   max-width: 100%;
   object-fit: cover;
+  /* border: 1px solid black; */
+  
 }
 
 @media (max-width: 768px) {
@@ -1051,23 +1067,28 @@ header .container {
 
 /* --- Vision Banners --- */
 .vision-banners-section {
-  padding: 4rem 0;
-  /* border: 2px solid black; */
+  /* padding: 4rem 0; */
+  border: 2px solid black;
 }
 .vision-banners-grid {
   display: grid;
   grid-template-columns: 1fr;
-  width: fit-content;   /* expands as wide as items */
-  height: auto;         /* let height depend on content */
+  width: 100% !important;       /* take full parent width */
+  max-width: 100% !important;   /* prevent shrinking */
+  height: auto;
   /* border: 2px solid black; */
+  /* box-sizing: border-box;   */
+
 }
+
+
 
 .vision-card {
   /* border: 2px solid black; */
   position: relative;
   height: 460px;
   width: 100%;             /* take full width of parent grid cell */
-  max-width: 720px;        /* don't exceed 720px */
+  max-width: 100%;        /* don't exceed 720px */
   overflow: hidden;
   color: white;
   display: flex;
@@ -1076,12 +1097,13 @@ header .container {
   align-items: center;
   text-align: center;
   padding: 2rem;
-  box-sizing: border-box;  /* ensures padding doesn't add extra width */
+  box-sizing: border-box; 
 }
 
 .vision-content {
   position: relative;
   z-index: 10;
+  /* border: 2px solid black; */
 }
 .vision-content h2 {
   font-size: 2.25rem;
@@ -1458,6 +1480,7 @@ footer {
     height: auto;
     min-height: 500px;
     padding: 2rem 0;
+    /* border: 1px solid black; */
     
   }
   
@@ -1466,6 +1489,8 @@ footer {
     text-align: center;
     padding: 2rem 1rem;
   }
+
+ 
   
   .hero-content {
     max-width: 100%;
@@ -1536,7 +1561,7 @@ footer {
   
   .tabs {
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 8px;
     justify-content: center;
     padding: 0 1rem;
   }
@@ -1546,13 +1571,40 @@ footer {
   }
   
   .scroll-container {
+    /* border: 1px solid black; */
     padding: 0 1rem;
-    gap: 1rem;
+    gap: 2px;
   }
   
-  .product-card-wrapper {
-    width: 250px;
-    flex-shrink: 0;
+ .scroll-container {
+  display: flex;
+  flex-direction: row;
+  /* gap: px;                 small gaps between items */
+  overflow-x: auto;         /* enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
+  padding: 8px 0;
+}
+
+.product-card-wrapper {
+  /* border: 1px solid black; */
+  text-align: center;
+  flex: 0 0 120px;          /* fixed width per card */
+  height: 200px;            /* adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  /* box-sizing: border-box; */
+  width: 160px;
+}
+
+
+  .product-section .scroll-container .product-card-wrapper:nth-child(n+5) {
+    display: none;
+  }
+
+  .product-card .wishlist-btn {
+    display: none;
   }
 
   /* Category Section - Mobile */
@@ -2051,6 +2103,461 @@ footer {
   }
 }
 
+
+/* =======================
+   End Extra Mobile Responsive Fixes
+   ======================= */
+
+   /* Mobile-only responsive tweaks for .promo-banners-section
+   (keeps desktop view unchanged) */
+@media (max-width: 767px) {
+  .promo-banners-section .container {
+    padding: 12px 16px;
+    max-width: 420px; /* match mobile layout */
+    margin: 0 auto;
+    /* border: 2px solid black; */
+    background-color: white;
+  }
+
+  .spacer{
+    display: none;
+  }
+
+  /* Make the whole promo area a horizontal scroller */
+  .promo-banners-grid {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+    overflow-x: auto;
+    padding: 8px 0;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    /* remove weird absolute positioned bg image on mobile */
+    /* border: 3px solid black; */
+  }
+
+  /* hide the decorative absolute background image on mobile */
+  .promo-banners-grid > img.bg-image {
+    display: none !important;
+  }
+
+  /* unify sizes of "large" and "small" cards on mobile so they look consistent */
+  /* .promo-card-large,
+  .promo-card-small {
+    flex: 0 0 240px;      
+    height: 160px;         
+    min-width: 132px ; 
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+    box-shadow: 0 8px 20px rgba(2,6,23,0.08);
+    scroll-snap-align: start;
+    display: block;
+    border: 3px solid black;
+  } */
+
+  /* dark overlay to increase text contrast */
+  .promo-card-large .promo-overlay,
+  .promo-card-small .promo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.48) 100%);
+    z-index: 1;
+  }
+
+  /* center content vertically/horizontally and keep it above overlay */
+  .promo-card-large .promo-content,
+  .promo-card-small .promo-content {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    gap: 6px;
+    color: #ffffff;
+    
+    /* border: 1px solid black; */
+  }
+
+  /* headline small and bold as in the provided image */
+  .promo-card-large .promo-content h2,
+  .promo-card-small .promo-content h2 {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+  
+  /* hide long description on mobile to match compact look */
+  .promo-card-large .promo-content p,
+  .promo-card-small .promo-content p {
+    display: none;
+  }
+  
+  /* small transparent button like screenshot */
+  .promo-card-large .promo-content .btn,
+  .promo-card-small .promo-content .btn {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 0;
+    box-shadow: none;
+  }
+  
+  /* slightly reduce button opacity when pressed */
+  .promo-card-large .promo-content .btn:active,
+  .promo-card-small .promo-content .btn:active {
+    opacity: 0.85;
+  }
+  
+  /* ensure group wrapper (two small cards) displays inline in the scroller */
+  .promo-small-group {
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+    flex: 0 0 auto;
+  }
+
+  /* small tweak for very small devices */
+  @media (max-width: 360px) {
+    .promo-card-large,
+    .promo-card-small {
+      flex: 0 0 200px;
+      min-width: 200px;
+      height: 140px;
+      border-radius: 10px;
+    }
+    .promo-card-large .promo-content h2,
+    .promo-card-small .promo-content h2 {
+      font-size: 12px;
+    }
+  }
+}
+
+/* === Mobile overrides for category-section: cards horizontal, no overlay, heading below === */
+@media (max-width: 767px) {
+  /* container for this section only */
+  .category-section .container {
+    padding: 8px 16px !important;
+    max-width: 420px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important; /* allow ordering of header vs cards */
+    align-items: stretch !important;
+  }
+
+  /* place the category row first and the header below it */
+  .category-section .category-flex {
+    order: 1 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 12px !important;
+    align-items: center !important;       /* vertically center cards */
+    justify-content: space-between !important;
+    padding: 6px 0 8px !important;
+    overflow-x: visible !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* show the header but put it below the cards */
+  .category-section .section-header {
+    order: 2 !important;
+    text-align: center !important;
+    padding-top: 6px !important;
+    margin: 6px 0 0 0 !important;
+  }
+  .category-section .section-header h2,
+  .category-section .section-header p {
+    margin: 0 !important;
+  }
+
+  /* each card: image above label, fixed narrow width so 4 fit across mobile */
+  .category-section .category-flex .category-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+
+    /* width that fits 4 items across with gaps on typical mobile widths */
+    flex: 0 0 88px !important;
+    width: 88px !important;
+    min-width: 88px !important;
+    max-width: 92px !important;
+  }
+
+  /* remove any dark/transparent overlay so thumbnails look crisp */
+  .category-section .category-card .promo-overlay {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  /* thumbnail size, no opacity, centered */
+  .category-section .category-card .category-card-bg {
+    width: 88px !important;
+    height: 88px !important;
+    border-radius: 12px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: block !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 14px rgba(2,6,23,0.06) !important;
+    margin: 0 auto !important;
+  }
+
+  /* label under thumbnail */
+  .category-section .category-card .category-card-content {
+    padding-top: 8px !important;
+    /* text-align: center !important; */
+    width: 150% !important;
+    /* border: 2px solid black; */
+    height: 150px;
+  }
+  .category-section .category-card .category-card-content h3 {
+    margin: 0 !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    text-align: left;
+    /* line-height: 1 !important; */
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    font-weight: bold;
+    /* text-overflow: ellipsis !important; */
+    color: #0b1220 !important;
+  }
+  .category-header{
+    display: none;
+  }
+  .category-section .category-card .category-card-content p {
+    display: none !important; /* hide the "50+" count as in image */
+  }
+
+  /* tiny screens: scale down a bit */
+  @media (max-width: 360px) {
+    .category-section .category-flex .category-card {
+      flex: 0 0 76px !important;
+      width: 76px !important;
+      min-width: 76px !important;
+    }
+    .category-section .category-card .category-card-bg {
+      width: 76px !important;
+      height: 76px !important;
+      border-radius: 10px !important;
+    }
+    .category-section .category-card .category-card-content h3 {
+      font-size: 12px !important;
+    }
+  }
+}
+
+
+
+
+
+/* Mobile Responsive Styles for New Arrivals Section */
+@media screen and (max-width: 768px) {
+    #new-arrivals {
+        padding: 20px 16px;
+        background: #f5f5f5;
+        overflow-x: hidden;
+    }
+
+    #new-arrivals .container {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        border: 2px solid black;
+      }
+      
+      #new-arrivals .section-header {
+      border: 2px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    #new-arrivals .section-header h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+        text-align: left;
+    }
+
+    #new-arrivals .section-header p {
+        display: none;
+    }
+
+    /* Arrow button in header */
+    #new-arrivals .section-header::after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%2300bcd4"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>') no-repeat center;
+        background-size: contain;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    #new-arrivals .tabs {
+        display: none;
+    }
+
+    #new-arrivals .carousel-wrapper {
+        background: #e8d5e8;
+        border-radius: 16px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #new-arrivals .scroll-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        overflow: visible;
+        padding: 0;
+    }
+
+    #new-arrivals .product-card-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Hide desktop scroll buttons */
+    #new-arrivals .scroll-prev,
+    #new-arrivals .scroll-next {
+        display: none;
+    }
+
+    /* Limit to show only 4 cards */
+    .product-card:nth-child(n+5) {
+        display: none;
+    }
+
+    /* Product Card Styles */
+    .product-card {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 8px;
+        text-align: center;
+        position: relative;
+        box-shadow: none;
+        border: 1px solid #E5E7EB;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        box-sizing: border-box;
+    }
+
+    .product-card .wishlist-btn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .product-card .wishlist-btn::before {
+        content: '♡';
+        font-size: 16px;
+        color: #666;
+        display: block;
+        line-height: 1;
+    }
+
+    .product-card .product-image {
+        width: 100%;
+        height: 120px;
+        object-fit: contain;
+        margin-bottom: 8px;
+        background: transparent;
+        border-radius: 4px;
+        padding: 0;
+    }
+
+    .product-card .brand {
+        font-size: 12px;
+        color: #4B5563;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+        font-weight: 500;
+    }
+
+    .product-card .product-name {
+        font-size: 13px;
+        color: #111827;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-bottom: 4px;
+        text-align: left;
+    }
+
+    .product-card .price-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 6px;
+        margin-top: 2px;
+        /* text-align: center; */
+    }
+
+    .product-card .original-price {
+        font-size: 12px;
+        color: #999;
+        text-decoration: line-through;
+    }
+
+    .product-card .current-price {
+        font-size: 14px;
+        color: #00bcd4;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+/* Ensure desktop styles remain unchanged */
+@media screen and (min-width: 769px) {
+    #new-arrivals .section-header::after {
+        display: none;
+    }
+    
+    .product-card:nth-child(n+5) {
+        display: block;
+    }
+}
 
 
 
