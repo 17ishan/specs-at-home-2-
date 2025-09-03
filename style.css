@@ -635,6 +635,7 @@ header .container {
     background-color: var(--brand-pink-light);
     padding: 3rem 0;
     height: 45rem;
+   
   }
   .promo-banners-grid {
   /* border: 1px solid black; */
@@ -973,6 +974,11 @@ header .container {
   align-items: center;
   padding: 40px;
 }
+.consultant-grid >img{
+  position: absolute;
+  margin-left: 530px; 
+  margin-bottom: 350px;
+}
 
 @media (max-width: 768px) {
   .consultant-grid {
@@ -1068,7 +1074,7 @@ header .container {
 /* --- Vision Banners --- */
 .vision-banners-section {
   /* padding: 4rem 0; */
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 .vision-banners-grid {
   display: grid;
@@ -1139,10 +1145,12 @@ header .container {
   color: var(--text-light);
 }
 .testimonial-card-wrapper {
+  /* border: 2px solid black; */
   width: 100%;
 }
 .testimonial-card {
-  background-color: #fff;
+  background-color: #FEFDF8;
+  /* background-color: #fff; */
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -1193,9 +1201,9 @@ header .container {
   background-color: var(--brand-pink-light);
   padding: 5rem 0;
   height: 660px;
-  /* border: 1px solid black; */
 }
 .blog-card-wrapper {
+  /* border: 1px solid black; */
   width: 100%;
 }
 .blog-card {
@@ -1534,11 +1542,11 @@ footer {
   }
 
   /* Promo Banners - Mobile */
-  /* .promo-banners-section {
+  .promo-banners-section {
     height: auto;
     padding: 2rem 0;
-    border: 1px solid black;
-  } */
+    /* border: 1px solid black; */
+  }
   
 
   
@@ -1610,27 +1618,33 @@ footer {
   /* Category Section - Mobile */
   .category-section {
     padding: 2rem 0;
+    border: 2px solid black;
   }
   
   .category-flex {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
+    gap: 2rem;
+    /* padding: 0 1rem; */
+    width: 100%; 
+    border: 2px solid black;
+}
+
   
   .category-card {
     width: 100%;
     max-width: 300px;
     height: 200px;
+    /* border: 2px solid black; */
   }
-
+  
   /* Consultant Section - Mobile */
   .consultant-grid {
     grid-template-columns: 1fr;
     padding: 2rem 1rem;
     gap: 2rem;
     text-align: center;
+    /* border: 2px solid black; */
   }
   
   .consultant-text {
@@ -1693,14 +1707,18 @@ footer {
   }
   
   .testimonial-card-wrapper {
-    width: 100%;
+    width: 50%;
     padding: 0 1rem;
+    /* border: 2px solid black; */
   }
   
   .scroll-container {
     padding: 0 1rem;
   }
-
+  .blog-card > img{
+    border-radius: 12px;
+  }
+  
   /* Blog Section - Mobile */
   .blog-section {
     height: auto;
@@ -1708,10 +1726,15 @@ footer {
   }
   
   .blog-card-wrapper {
+    border-radius: 12px;
     width: 280px;
     flex-shrink: 0;
+    /* border: 2px solid black; */
+    border-radius: 12px;
+    background-color: white;
+    padding: 1rem;
   }
-
+  
   /* CTA Section - Mobile */
   .cta-section {
     padding: 2rem 0;
@@ -1797,11 +1820,14 @@ footer {
   #hero-section {
     height: 200px;
     width: 100%;
+    border: 2px solid black;
   }
   .hero-content {
     text-align: center;
     padding: 1rem;
     align-items: center;
+    border: 2px solid black;
+    display: flex;
   }
   .hero-content h1 {
     font-size: 1.25rem;
@@ -1861,6 +1887,12 @@ footer {
 
   /* --- Consultant --- */
   .consultant-grid {
+
+    display: flex;
+    /* padding: 10px; */
+    justify-items: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
     grid-template-columns: 1fr;
     text-align: center;
     padding: 2rem 1rem;
@@ -1887,6 +1919,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    display: none;
   }
   .vision-card {
     height: 160px;
@@ -1909,6 +1942,14 @@ footer {
   
   
 }
+
+
+
+
+
+
+
+
 
 /* ========== Footer Responsive for Mobile ========== */
 /* Mobile-only footer (does NOT change desktop) */
@@ -2387,32 +2428,31 @@ footer {
         padding: 0;
         margin: 0;
         overflow-x: hidden;
-        border: 2px solid black;
+        /* border: 2px solid black; */
       }
       
       #new-arrivals .section-header {
-      border: 2px solid black;
+        /* border: 2px solid black; */
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px;
         padding: 0;
-    }
-
-    #new-arrivals .section-header h2 {
-        font-size: 18px;
+      }
+      
+      #new-arrivals .section-header h2 {
         font-weight: 600;
         color: #333;
         margin: 0;
         text-align: left;
-    }
-
-    #new-arrivals .section-header p {
+      }
+      
+      #new-arrivals .section-header p {
         display: none;
-    }
-
-    /* Arrow button in header */
-    #new-arrivals .section-header::after {
+      }
+      
+      /* Arrow button in header */
+      #new-arrivals .section-header::after {
         content: '';
         width: 24px;
         height: 24px;
@@ -2420,13 +2460,14 @@ footer {
         background-size: contain;
         cursor: pointer;
         flex-shrink: 0;
-    }
-
-    #new-arrivals .tabs {
+        font-size: 18px;
+      }
+      
+      #new-arrivals .tabs {
         display: none;
-    }
-
-    #new-arrivals .carousel-wrapper {
+      }
+      
+      #new-arrivals .carousel-wrapper {
         background: #e8d5e8;
         border-radius: 16px;
         padding: 20px;
@@ -2434,19 +2475,20 @@ footer {
         overflow: hidden;
         width: 100%;
         box-sizing: border-box;
-    }
-
-    #new-arrivals .scroll-container {
+      }
+      
+      #new-arrivals .scroll-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         width: 100%;
         overflow: visible;
         padding: 0;
-    }
-
-    #new-arrivals .product-card-wrapper {
-        width: 100%;
+      }
+      
+      #new-arrivals .product-card-wrapper {
+        max-width: 50%;
+        /* border: 2px solid black; */
         height: auto;
     }
 
@@ -2559,5 +2601,142 @@ footer {
     }
 }
 
+
+
+
+/* Mobile-only consultant section (copy-paste this whole block) */
+@media (max-width: 768px) {
+  .consultant-section {
+    /* background: #fffbea; */
+    /* padding: 16px; */
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+  }
+
+  /* container that holds text (left) and image (right) */
+  .consultant-section .container.consultant-grid {
+    display: flex;
+    /* flex-direction: row;               text left, image right */
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: 720px;
+    height: 200px;                     /* fixed visual height matching screenshot */
+    margin: 0 auto;
+    position: relative;
+    overflow: visible;                 /* allow image to sit slightly outside */
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 12px;
+    /* border: 2px solid black; */
+
+  }
+
+  /* hide decorative background image on mobile */
+  .consultant-section .container.consultant-grid .bg-image,
+  .consultant-section .container.consultant-grid > img.bg-image {
+    display: none !important;
+  }
+
+  /* TEXT (left) */
+  .consultant-section .consultant-text {
+  /* take 60% of the row, allow shrinking */
+  flex: 0 1 60%;
+  max-width: 60%;
+  min-width: 0; /* allow truncation when needed */
+  box-sizing: border-box;
+  height: 160px;
+  text-align: left;
+  padding-right: 10px;
+  /* border: 2px solid black; */
+}
+
+  
+  .consultant-section .consultant-text h2 {
+    font-size: 1.05rem;
+    line-height: 1.12;
+    margin: 0 0 6px 0;
+    font-weight: 800;
+    color: #0f172a;
+    /* border: 2px solid black; */
+  }
+  
+  /* show only the first paragraph and clamp to 3 lines */
+  .consultant-section .consultant-text p {
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #4a555b;
+    margin: 0 0 6px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* border: 2px solid black; */
+  }
+  .consultant-section .consultant-text p:first-of-type {
+    -webkit-line-clamp: 3;
+  }
+  /* hide the second paragraph on mobile for compact layout */
+  .consultant-section .consultant-text p:nth-of-type(2) {
+    display: none;
+  }
+
+
+
+  /* Button styled as blue link, left aligned with text */
+  .consultant-section .consultant-text .btn,
+  .consultant-section .consultant-text a.btn,
+  .consultant-section .consultant-text a.btn-primary {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #0b76d1;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(11,118,209,0.14);
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  /* IMAGE (right) */
+  .consultant-section .consultant-image {
+    flex: 0 0 140px;                   /* fixed column for the image */
+    width: 140px;
+    height: 140px;
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-end;         */
+    box-sizing: border-box;
+    /* position: absolute; */
+    transform: translateX(8px); 
+    /* margin-left: ;  */
+    /* border: 1px solid black; */
+  }
+
+  .consultant-section .consultant-image img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 1px 0 rgba(15,17,42,0.04);
+  }
+
+  /* very small screens: scale down proportionally */
+  @media (max-width: 380px) {
+    .consultant-section .container.consultant-grid { height: 150px; }
+    .consultant-section .consultant-image { flex: 0 0 120px; width: 120px; height: 120px; transform: translateX(6px); }
+    .consultant-section .consultant-image img { width: 120px; height: 120px; }
+    .consultant-section .consultant-text h2 { font-size: 1rem; }
+    .consultant-section .consultant-text p { font-size: 0.86rem; -webkit-line-clamp: 3; }
+  }
+}
 
 
