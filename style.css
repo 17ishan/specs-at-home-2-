@@ -790,10 +790,10 @@ header .container {
   flex-shrink: 0;
   /* border: 2px solid black; */
 }
-.product-card-wrapper {
+/* .product-card-wrapper {
   width: 280px;
   /* border: 2px solid black; */
-}
+} */
 
 .product-card {
   background-color: white;
@@ -1609,26 +1609,18 @@ footer {
     gap: 2px;
   }
   
- .scroll-container {
-  display: flex;
-  flex-direction: row;
-  /* gap: px;                 small gaps between items */
-  overflow-x: auto;         /* enable horizontal scrolling */
-  -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
-  padding: 8px 0;
-}
+
 
 .product-card-wrapper {
   /* border: 1px solid black; */
   text-align: center;
   flex: 0 0 120px;          /* fixed width per card */
-  height: 290px;            /* adjust as needed */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   /* box-sizing: border-box; */
-  width: 160px;
+  /* width: 160px; */
 }
 
 
@@ -1952,14 +1944,14 @@ footer {
   }
 
   /* --- Testimonials + Blogs → carousel --- */
-  .scroll-container {
+  #testimonial-cards{
     display: flex;
     overflow-x: auto;
     gap: 12px;
     padding: 0 1rem;
     scroll-snap-type: x mandatory;
   }
-  .scroll-container > * {
+  #testimonial-cards> * {
     min-width: 240px;
     scroll-snap-align: start;
   }
@@ -2499,7 +2491,7 @@ footer {
         /* padding: 20px; */
         position: relative;
         overflow: hidden;
-        width: 100%;
+        /* width: 100%; */
         box-sizing: border-box;
         /* border: 2px solid black; */
       }
@@ -2507,18 +2499,18 @@ footer {
       #new-arrivals .scroll-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 16px;
         width: 100%;
         overflow: visible;
-        padding: 0;
+        padding: 16px;
         /* border: 2px solid black; */
       }
       
-      #new-arrivals .product-card-wrapper {
+      /* #new-arrivals .product-card-wrapper {
         max-width: 30%;
         height: auto;
         /* border: 2px solid black; */
-    }
+    } */
 
     /* Hide desktop scroll buttons */
     #new-arrivals .scroll-prev,
@@ -2540,8 +2532,8 @@ footer {
         position: relative;
         box-shadow: none;
         border: 1px solid #E5E7EB;
-        width: 80%;
-        height: auto;
+        /* width: 80%; */
+        /* height: auto; */
         display: flex;
         flex-direction: column;
         gap: 4px;
