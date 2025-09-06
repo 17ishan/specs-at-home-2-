@@ -24,10 +24,19 @@ html {
   font-size: 16px;
 }
 
+.main-content{
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 14px;
   }
+  .main-content{
+  display: flex;
+  flex-direction: column-reverse;
+}
 }
 
 body {
@@ -62,8 +71,8 @@ button {
 
 .bg-image{
   /* position: absolute; */
-   width: 341px;
-  height: 341px;
+   /* width: 341px; */
+  height: 210px;
   /* top: 780px; */ 
 }
 
@@ -761,7 +770,6 @@ header .container {
 /* --- Product Sections --- */
 .product-section {
   padding: 4rem 0;
-  
 }
 .tabs {
   display: flex;
@@ -856,9 +864,9 @@ header .container {
 }
 .product-card .wishlist-btn {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  color: #9ca3af;
+  top: 2rem;
+  right: 2rem;
+  color: #737881;
 }
 .product-card .wishlist-btn:hover {
   color: #ef4444;
@@ -896,9 +904,7 @@ header .container {
   opacity: 1;
 }
 .product-card .add-to-cart-overlay .btn {
-  padding-left: 5rem;
-  padding-right: 5rem;
-  border-radius: 0px;
+  width: 100%;
 }
 .product-card .brand {
   font-size: 0.75rem;
@@ -987,7 +993,7 @@ header .container {
   transform: scale(1.1);
 }
 .category-card-content {
-  position: relative;
+  /* position: relative; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1019,12 +1025,14 @@ header .container {
 }
 .consultant-grid >img{
   position: absolute;
+
   margin-left: 530px; 
-  margin-bottom: 350px;
+  margin-bottom: 320px;
 }
 
 @media (max-width: 768px) {
   .consultant-grid {
+    position: relative;
     grid-template-columns: 1fr;
     padding: 2rem 1rem;
     gap: 2rem;
@@ -1074,7 +1082,7 @@ header .container {
 .consultant-image img {
   border-radius: 0.5rem;
   width: 500px;
-  height: 519px;
+  height: 480px;
   max-width: 100%;
   object-fit: cover;
   /* border: 1px solid black; */
@@ -1086,6 +1094,7 @@ header .container {
     width: 100%;
     height: auto;
     max-height: 400px;
+    margin-top: 20px;
   }
 }
 
@@ -1636,19 +1645,17 @@ footer {
 
   /* Promo Banners - Mobile */
   .promo-banners-section {
-    height: auto;
-    padding: 2rem 0;
+    height: 25vh;
+    /* padding: 2rem 0; */
     /* border: 1px solid black; */
-    background-color: #ffffff;
   }
   
 
   
   .promo-card-large,
   .promo-card-small {
-    width: 40%;
+    /* width: 40%; */
     height: 300px;
-    margin: 0 auto;
   }
   
   .promo-card-large h2,
@@ -1658,6 +1665,7 @@ footer {
 
   /* Product Section - Mobile */
   .product-section {
+    margin-top: 20px;
     padding: 2rem 0;
   }
   
@@ -1703,6 +1711,7 @@ footer {
   border-radius: 8px;
   /* box-sizing: border-box; */
   width: auto;
+  height: 300px;
 }
 
 
@@ -1710,9 +1719,6 @@ footer {
     display: none;
   }
 
-  .product-card .wishlist-btn {
-    display: none;
-  }
 
   /* Category Section - Mobile */
   .category-section {
@@ -1725,11 +1731,8 @@ footer {
     width: 100%;
     /* flex-direction: row; */
     /* align-items: center; */
-    display: grid;
-    /* background: #000; */
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6rem;
-
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); */
 }
 
   
@@ -1806,7 +1809,6 @@ footer {
   .testimonial-card-wrapper {
     width: 50%;
     padding: 0 1rem;
-    border: 2px solid black;
   }
   
   .scroll-container {
@@ -1987,7 +1989,6 @@ display: none;
   /* --- Promo banners → horizontal scroll --- */
   .promo-banners-grid {
     height: 30vh;
-    display: flex;
     overflow-x: auto;
     gap: 12px;
     padding: 0 1rem;
@@ -1995,7 +1996,7 @@ display: none;
   }
   .promo-card-large,
   .promo-card-small {
-    min-width: 132px;
+    min-width: 150px;
     height: 160px;
     border-radius: 12px;
     flex-shrink: 0;
@@ -2017,13 +2018,14 @@ display: none;
   .category-flex {
     display: flex;
     overflow-x: auto;
-    gap: 12px;
+    gap: 20px;
+    /* background-color: red; */
+    /* height: 150px; */
     /* padding: 0 1rem; */
     /* scroll-snap-type: x mandatory; */
   }
   .category-card {
-    min-width: 132px;
-    height: 160px;
+    height: 100px;
     border-radius: 12px;
     flex-shrink: 0;
     scroll-snap-align: center;
@@ -2197,7 +2199,7 @@ display: none;
 
   /* Link columns: ABOUT US and MORE INFO should sit side-by-side */
   .footer-col-links {
-    width: 170px;
+    width: 150px;
     padding: 0;
     /* border: 2px solid black; */
   }
@@ -2205,7 +2207,7 @@ display: none;
   
 
   .footer-col-links h4 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     margin-bottom: 8px;
     text-transform: none;
@@ -2317,11 +2319,10 @@ display: none;
    (keeps desktop view unchanged) */
 @media (max-width: 767px) {
   .promo-banners-section .container {
-    padding: 12px 16px;
-    max-width: 420px; /* match mobile layout */
-    margin: 0 auto;
-    /* border: 2px solid black; */
-    background-color: white;
+    padding: 0 16px !important;
+    margin: 0 auto !important;  
+    /* max-width: 420px !important; */
+    /* border: 3px solid black; */
   }
 
   .spacer{
@@ -2330,7 +2331,8 @@ display: none;
 
   /* Make the whole promo area a horizontal scroller */
   .promo-banners-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     align-items: stretch;
     overflow-x: auto;
@@ -2381,7 +2383,7 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     text-align: center;
     padding: 10px;
     gap: 6px;
@@ -2411,14 +2413,15 @@ display: none;
   /* small transparent button like screenshot */
   .promo-card-large .promo-content .btn,
   .promo-card-small .promo-content .btn {
-    background: rgba(255,255,255,0.12);
-    color: #fff;
+    /* background: rgba(255,255,255,0.12); */
+    color: #f3f3f3;
     padding: 6px 10px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 100;
     border-radius: 8px;
     text-decoration: none;
     border: 0;
+    text-transform: lowercase;
     box-shadow: none;
   }
   
@@ -2441,9 +2444,6 @@ display: none;
   @media (max-width: 360px) {
     .promo-card-large,
     .promo-card-small {
-      flex: 0 0 200px;
-      min-width: 200px;
-      height: 140px;
       border-radius: 10px;
     }
     .promo-card-large .promo-content h2,
@@ -2460,8 +2460,6 @@ display: none;
     padding: 8px 16px !important;
     /* max-width: 420px !important; */
     margin: 0 auto !important;  
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
 
   }
 
@@ -2478,6 +2476,7 @@ display: none;
     padding: 6px 0 8px !important;
     overflow-x: visible !important;
     -webkit-overflow-scrolling: touch !important;
+    position:  relative !important;
   }
 
   /* show the header but put it below the cards */
@@ -2522,22 +2521,24 @@ display: none;
     background-size: cover !important;
     background-position: center !important;
     display: block !important;
-    overflow: hidden !important;
+    /* overflow: hidden !important; */
     box-shadow: 0 6px 14px rgba(2,6,23,0.06) !important;
     margin: 0 auto !important;
   }
 
   /* label under thumbnail */
   .category-section .category-card .category-card-content {
-    position: absolute;
-    bottom: -40px !important;
-    padding-top: 8px !important;
+    /* bottom: -40px !important; */
+    /* padding-top: 8px !important; */
     /* text-align: center !important; */
-    width: 150% !important;
+    /* width: 150% !important; */
     /* border: 2px solid black; */
-    height: 150px;
+    /* height: 150px; */
+    margin-top: 200px;
   }
   .category-section .category-card .category-card-content h3 {
+    /* position: absolute; */
+    /* bottom: 10px; */
     margin: 0 !important;
     font-size: 10px !important;
     font-weight: 600 !important;
@@ -2547,7 +2548,7 @@ display: none;
     overflow: hidden !important;
     font-weight: bold;
     /* text-overflow: ellipsis !important; */
-    color: #0b1220 !important;
+    /* color: #0b1220 !important; */
   }
   .category-header{
     display: none;
@@ -2630,7 +2631,7 @@ display: none;
       
       #new-arrivals .carousel-wrapper {
         background: #e8d5e8;
-        border-radius: 16px;
+        border-radius: 10px;
         /* padding: 20px; */
         position: relative;
         overflow: hidden;
@@ -2809,9 +2810,9 @@ display: none;
   max-width: 60%;
   min-width: 0; /* allow truncation when needed */
   box-sizing: border-box;
-  height: 160px;
+  height: 120px;
   text-align: left;
-  padding-right: 10px;
+  padding-top: 10px;
   /* border: 2px solid black; */
 }
 
