@@ -141,30 +141,62 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- MOST POPULAR: TAB LOGIC + RENDERING ---
-  const mostPopularContainer = document.querySelector("#most-popular .scroll-container");
-  const mostPopularTabButtons = document.querySelectorAll("#most-popular .tabs .tab-btn");
+// --- MOST POPULAR: TAB LOGIC + RENDERING ---
+const glassesContainer = document.querySelector("#product-card-glasses");
+const sunglassesContainer = document.querySelector("#product-card-sunglasses");
+const mostPopularTabs = document.querySelector("#most-popular .tabs");
 
-  function renderMostPopular(category = "glasses") {
-    if (!mostPopularContainer) return;
-    const filtered = products.filter((p) => p.category === category);
-    if (!filtered.length) {
-      mostPopularContainer.innerHTML = `<div class="no-products">No products found for "${escapeHtml(category)}".</div>`;
-      return;
-    }
-    mostPopularContainer.innerHTML = filtered.map(createProductCard).join("");
-  }
+// Render function
+function renderMostPopular() {
+  if (!glassesContainer || !sunglassesContainer) return;
 
-  if (mostPopularTabButtons && mostPopularTabButtons.length) {
-    mostPopularTabButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        mostPopularTabButtons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        const dataCat = btn.getAttribute("data-category");
-        const cat = (dataCat || btn.textContent || "").trim().toLowerCase();
-        renderMostPopular(cat || "glasses");
-      });
-    });
+  const glasses = products.filter((p) => p.category === "glasses");
+  const sunglasses = products.filter((p) => p.category === "sunglasses");
+
+  // Always render both
+  glassesContainer.innerHTML = glasses.map(createProductCard).join("");
+  sunglassesContainer.innerHTML = sunglasses.map(createProductCard).join("");
+
+  // Mobile: hide tab bar, show both sections stacked
+  if (window.innerWidth <= 768) {
+    mostPopularTabs.style.display = "none";
+    document.getElementById("glasses-section").style.display = "block";
+    document.getElementById("sunglasses-section").style.display = "block";
+    document.getElementById("shop-for").style.display = "block";
+  } else {
+    // Desktop: show tab bar, only one section at a time
+    mostPopularTabs.style.display = "flex";
+    document.getElementById("shop-for").style.display = "none";
+    const activeTab = document.querySelector("#most-popular .tabs .tab-btn.active");
+    const category = activeTab ? activeTab.dataset.category : "glasses";
+    toggleDesktopView(category);
   }
+}
+
+function toggleDesktopView(category) {
+  if (category === "glasses") {
+    document.getElementById("glasses-section").style.display = "block";
+    document.getElementById("sunglasses-section").style.display = "none";
+  } else {
+    document.getElementById("glasses-section").style.display = "none";
+    document.getElementById("sunglasses-section").style.display = "block";
+  }
+}
+
+// Tab click (desktop)
+document.querySelectorAll("#most-popular .tabs .tab-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("#most-popular .tabs .tab-btn").forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    toggleDesktopView(btn.dataset.category);
+  });
+});
+
+// Init + resize
+renderMostPopular();
+window.addEventListener("resize", renderMostPopular);
+
+
 
   const initialMostActive = document.querySelector("#most-popular .tabs .tab-btn.active");
   const initialMostCategory = initialMostActive ? (initialMostActive.getAttribute("data-category") || initialMostActive.textContent).trim().toLowerCase() : "glasses";
@@ -303,3 +335,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 });
+
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.hero-indicators .dot');
+let currentIndex = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+    dots[i].classList.toggle('active', i === index);
+  });
+}
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    currentIndex = i;
+    showSlide(currentIndex);
+  });
+});
+
+// initialize
+showSlide(currentIndex);
+
