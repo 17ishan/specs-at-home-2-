@@ -50,9 +50,10 @@
   </header>
 
 
-    <main>
+    <main class="main">
         <!-- Hero Section -->
-        <section id="hero-section">
+        <div class="hero">
+          <section id="hero-section">
             <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1574258481428-db0819911e38?q=80&w=2070&auto=format&fit=crop');">
                 <!-- <div class="hero-gradient" ></div> -->
                 <div class="container hero-content-container" >
@@ -87,7 +88,16 @@
             <button class="hero-next hero-nav-btn">
               <img src="/assets/arrow-right.png" style="margin-left: 11px;" alt="">
             </button>
+
         </section>
+        <div class="hero-indicators">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+        </div>
+
 
         <div class="main-content">
           
@@ -126,7 +136,7 @@
                         
                         <h2>REGLAZE YOUR FRAME</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet.</p>
-                        <a href="#" class="btn btn-primary">SHOP NOW</a>
+                        <a href="#" class="btn btn-primary">SHOP NOW <img src="/assets/arrow-right.png" alt=""></a>
                     </div>
                 </div>
                 <div class="promo-small-group">
@@ -163,29 +173,71 @@
         
         <!-- Product Carousel Section -->
         <section id="most-popular" class="product-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>MOST POPULAR</h2>
-                    <p>Quality, reasonable price are the strengths of our products.</p>
-                </div>
-                <div class="tabs">
-                    <button class="tab-btn active">GLASSES</button>
-                    <button class="tab-btn">SUNGLASSES</button>
-                </div>
-                <div class="carousel-wrapper">
-                    <div class="scroll-container" id="product-card2">
-                        <!-- Product Cards will be injected here by script.js -->
-                    </div>
-                    <button class="scroll-prev scroll-btn hero-nav-btn">
-                      <img src="/assets/arrow-left.png" style="margin-left: 11px;" alt="">
-                    </button>
-                    <button class="scroll-next scroll-btn hero-nav-btn">
-                      <img src="/assets/arrow-right.png" style="margin-left: 11px;" alt="">
-                    </button>
-                </div>
-                
-            </div>
-        </section>
+  <div class="container">
+    <div class="section-header" id="most-popular-header">
+      <h2>MOST POPULAR</h2>
+      <p>Quality, reasonable price are the strengths of our products.</p>
+    </div>
+
+    <!-- Tab bar (desktop only, hidden in mobile) -->
+    <div class="tabs">
+      <button class="tab-btn active" data-category="glasses">GLASSES</button>
+      <button class="tab-btn" data-category="sunglasses">SUNGLASSES</button>
+    </div>
+
+    <!-- Glasses Section -->
+    <div id="glasses-section" class="popular-section">
+      <h3 class="mobile-header">Popular in Glasses</h3>
+      <div class="carousel-wrapper">
+        <div class="scroll-container" id="product-card-glasses">
+          <!-- Injected by JS -->
+        </div>
+        <button class="scroll-prev scroll-btn hero-nav-btn">
+          <img src="/assets/arrow-left.png" style="margin-left: 11px;" alt="">
+        </button>
+        <button class="scroll-next scroll-btn hero-nav-btn">
+          <img src="/assets/arrow-right.png" style="margin-left: 11px;" alt="">
+        </button>
+      </div>
+    </div>
+
+    <!-- Shop For Block (mobile only) -->
+    <div id="shop-for" class="shop-for-block">
+      <h3>Shop for</h3>
+      <div class="shop-for-options">
+        <div class="option">
+          <img src="/assets/men.png" alt="Men" />
+          <p>Men</p>
+        </div>
+        <div class="option">
+          <img src="/assets/women.png" alt="Women" />
+          <p>Women</p>
+        </div>
+        <div class="option">
+          <img src="/assets/kid.png" alt="Kids" />
+          <p>Kids</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sunglasses Section -->
+    <div id="sunglasses-section" class="popular-section">
+      <h3 class="mobile-header">Popular in Sunglasses</h3>
+      <div class="carousel-wrapper">
+        <div class="scroll-container" id="product-card-sunglasses">
+          <!-- Injected by JS -->
+        </div>
+        <button class="scroll-prev scroll-btn hero-nav-btn">
+          <img src="/assets/arrow-left.png" style="margin-left: 11px;" alt="">
+        </button>
+        <button class="scroll-next scroll-btn hero-nav-btn">
+          <img src="/assets/arrow-right.png" style="margin-left: 11px;" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
         
@@ -238,16 +290,70 @@
             <div class="container consultant-grid">
               <img src="assets/bgimage.png" alt="" class="bg-image" >
             <div class="consultant-text">
-              <h2>MEET MR.KASHAN</h2>
+              <div>
+                <h2>MEET MR.KASHAN</h2>
               <p>Hi, I'm Kashan, a Style & Vision Consultant and founder of Specs at Home. My mission is simple: to make buying glasses easier, more affordable, and tailored to your lifestyle. I realised that the traditional eyewear industry hasn't changed for years - customers still face high prices, long waiting times, and the inconvenience of multiple visits to an optician. That's why I created Specs at Home, a mobile optical dispensing service that brings premium-quality eyewear straight to your door.</p>
               <p>Ready to find your perfect pair of glasses? Click below to schedule your appointment with our mobile eyewear specialist.</p>
-              <a href="#" class="btn btn-primary">BOOK AN APPOINTMENT</a>
+              </div>
+              <a href="#">Book an Appointment</a>
             </div>
             <div class="consultant-image">
               <img src="/assets/kashan.png" alt="Mr. Kashan"/>
             </div>
           </div>
         </section>
+
+        <!-- Vision with Brands Section -->
+<section id="vision-brands" class="product-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Vision with Brands</h2>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="scroll-container">
+        
+        <!-- Brand Card -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="./assets//Ryan ban.png" alt="Ray Ban" />
+          </div>
+          <h3>Ray Ban</h3>
+          <p>Upto 50% off</p>
+        </div>
+
+        <!-- Brand Card -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="./assets/walter.png" />
+          </div>
+          <h3>Walter & Herbert</h3>
+          <p>Under £29</p>
+        </div>
+
+        <!-- Brand Card -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="./assets/vogue.png" alt="Vogue" />
+          </div>
+          <h3>Vogue</h3>
+          <p>Flat 20% off</p>
+        </div>
+
+        <!-- Brand Card -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="./assets/Ryan ban.png" alt="Ray Ban" />
+          </div>
+          <h3>Ray Ban</h3>
+          <p>Upto 30% off</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <!-- Product Carousel Section -->
         <section id="new-arrivals" class="product-section">
